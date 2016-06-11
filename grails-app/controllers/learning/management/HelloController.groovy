@@ -6,8 +6,8 @@ class HelloController {
         render("Hello this is me. <h1>Sidharth</h1>")
     }
 
-    def salman() {
-        render("This is Salman Khan")
+    def register() {
+        render(view: "signup")
     }
 
     def signup() {

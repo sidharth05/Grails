@@ -3,13 +3,14 @@ package learning.management
 class FormController {
 
     def saveUser() {
-        println("Thanks for submitting form")
-        println(params)
+        println("Parameters received")
+        println params.firstName
+        println params.lastName
+        println params.email
+        println params.pwd
 
-        redirect(controller: "form", action: "thankYou")
+
+        return [firstName: params.firstName, lastName: params.lastName, email: params.email, currentDate: new Date()]
     }
 
-    def thankYou() {
-        render ("""Have a great day""")
-    }
 }
