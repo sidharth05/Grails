@@ -10,8 +10,6 @@ class FormController {
     }
 
     def thankYou() {
-        render ("""Have a great day
-                    $params.firstName $params.lastName $params.email
-                    """)
+        render ("""Have a great day""")
     }
 }
