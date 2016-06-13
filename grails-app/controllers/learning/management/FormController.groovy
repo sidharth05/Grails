@@ -6,6 +6,10 @@ class FormController {
         println("Parameters received")
         println params
 
+        params.age = params.age ?: 0
+
+        params.age = params.age.toInteger()
+
         User myUser = new User([myFirstName: params.firstName, myLastName: params.lastName,
                                 myEmail: params.email, myAge: params.age])
 

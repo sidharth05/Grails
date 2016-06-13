@@ -12,6 +12,7 @@ class User {
     void myTask() {
         myFirstName=myFirstName.toUpperCase()
         myLastName=myLastName.toUpperCase()
+        myEmail=myEmail.toUpperCase()
     }
 
 
