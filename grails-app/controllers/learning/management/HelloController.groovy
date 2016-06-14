@@ -11,5 +11,7 @@ class HelloController {
     }
 
     def signup() {
+        session.foo = "bar"
+        session.myName = "Donald"
     }
 }
