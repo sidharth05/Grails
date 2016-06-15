@@ -9,17 +9,43 @@
 <html>
 <head>
   <title></title>
+    <asset:stylesheet href="bootstrap.min.css"/>
+    <asset:javascript src="jquery.min.js"/>
+    <asset:javascript src="bootstrap.min.css"/>
 </head>
 <body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Form</a>
+        </div>
+        <div class="container collapse navbar-collapse" id="bs">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <g:link controller="user" action="create">Create</g:link>
+                </li>
+                <li>
+                    <g:link controller="user" action="show">Show</g:link>
+                <li>
+                    <g:link controller="user" action="list">List</g:link>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
     Paramater Received. See you soon<br><br>
-
-    FirstName: ${recentlySavedUser.myFirstName}<br><br>
-    LastName: ${recentlySavedUser.myLastName}<br><br>
-    Email: ${recentlySavedUser.myEmail}<br><br>
-    Age: ${recentlySavedUser.myAge}<br><br>
-
-<button><a href="http://localhost:8080/learning-management/user/create">Again</a></button>
-<button><a href="http://localhost:8080/learning-management/user/list">List</a></button>
-
+    <dl class="dl-horizontal">
+        <dt>FirstName:</dt> <dd>${recentlySavedUser.myFirstName}</dd>
+        <dt>LastName:</dt> <dd>${recentlySavedUser.myLastName}</dd>
+        <dt>Email:</dt> <dd>${recentlySavedUser.myEmail}</dd>
+        <dt>Age:</dt> <dd>${recentlySavedUser.myAge}</dd>
+    </dl>
 </body>
 </html>

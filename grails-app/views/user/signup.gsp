@@ -3,19 +3,40 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sign Up FOrm</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <asset:stylesheet href="bootstrap.min.css"/>
+    <asset:javascript src="jquery.min.css"/>
+    <asset:javascript src="bootstrap.min.js"/>
 </head>
 <body>
-<div class="container-fluid">
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Form</a>
+        </div>
+        <div class="container collapse navbar-collapse" id="bs">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <g:link controller="user" action="create">Create</g:link>
+                </li>
+                <li>
+                    <g:link controller="user" action="show">Show</g:link>
+                <li>
+                <g:link controller="user" action="list">List</g:link>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
     <h1>Signup Form</h1>
-    <form class="form-inline" method="post" action="/learning-management/user/save">
+    <form class="form-horizontal" method="post" action="/learning-management/user/save">
         <div class="form-group">
             <label >First Name</label>
             <input class="form-control" type="text" name="firstName" placeholder="FirstName"><br><br>
@@ -33,7 +54,7 @@
             <input class="form-control" type="number" name="age" placeholder="Age"><br><br>
         </div>
         <div class="form-group">
-            <input class="form-control" type="submit" value="Submit">
+            <input class="btn btn-primary" type="submit" value="Submit">
         </div>
     </form>
 </div>
