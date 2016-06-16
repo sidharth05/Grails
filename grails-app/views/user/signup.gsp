@@ -2,13 +2,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="layout" content="abc">
     <title>Sign Up FOrm</title>
-    <asset:stylesheet href="bootstrap.min.css"/>
-    <asset:javascript src="jquery.min.css"/>
-    <asset:javascript src="bootstrap.min.js"/>
 </head>
 <body>
-<g:render template="/template/myNavbar" model="[myCurrentPage: 'create']"/>
 <div class="container">
     <h1>Signup Form</h1>
     <form class="form-horizontal" method="post" action="/learning-management/user/save">

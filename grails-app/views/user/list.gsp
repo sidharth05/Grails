@@ -10,13 +10,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="layout" content="abc">
     <title>List Page</title>
-    <asset:stylesheet href="bootstrap.min.css"/>
-    <asset:javascript src="jquery.min.js"/>
-    <asset:javascript src="bootstrap.mn.js"/>
 </head>
 <body>
-<g:render template="/template/myNavbar" model="[myCurrentPage: 'list']"/>
 <div>
     <h1>Details of all input User</h1>
     <table class="table table-striped">

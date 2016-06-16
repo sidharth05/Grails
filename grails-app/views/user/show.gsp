@@ -9,12 +9,9 @@
 <html>
 <head>
   <title></title>
-    <asset:stylesheet href="bootstrap.min.css"/>
-    <asset:javascript src="jquery.min.js"/>
-    <asset:javascript src="bootstrap.min.css"/>
+    <meta name="layout" content="abc">
 </head>
 <body>
-<g:render template="/template/myNavbar" model="[myCurrentPage: 'show']"/>
     Paramater Received. See you soon<br><br>
     <dl class="dl-horizontal">
         <dt>FirstName:</dt> <dd>${recentlySavedUser.myFirstName}</dd>
