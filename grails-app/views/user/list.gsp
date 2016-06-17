@@ -14,31 +14,39 @@
     <title>List Page</title>
 </head>
 <body>
-<div>
+
+<content tag="header">
     <h1>Details of all input User</h1>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Age</th>
-        </tr>
-        </thead>
-        <tbody>
-        <g:each in="${allUsers}" var="user">
-            <tr class="${user.myAge.toInteger() > 100 ? 'bg-danger' : ' '} ">
-                <td>${user.myFirstName}<br></td>
-                <td>${user.myLastName}<br></td>
-                <td>${user.myEmail}<br></td>
-                <td>${user.myAge}<br></td>
+</content>
+
+<content tag="main-content">
+    <div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Age</th>
             </tr>
-        </g:each>
-        </tbody>
-    </table>
-</div>
+            </thead>
+            <tbody>
+            <g:each in="${allUsers}" var="user">
+                <tr class="${user.age.toInteger() > 100 ? 'bg-danger' : ' '} ">
+                    <td>${user.firstName}<br></td>
+                    <td>${user.lastName}<br></td>
+                    <td>${user.email}<br></td>
+                    <td>${user.age}<br></td>
+                </tr>
+            </g:each>
+            </tbody>
+        </table>
+    </div>
+</content>
+
+<content tag="side-content">
+    div2 - Notice that the div2 element is after div1, in the HTML code. However, since div1 is floated to the left, this happens: the text in div2 is floated around div1, and div2 surrounds the whole thing.
+</content>
 </body>
-<head>
-  <title></title>
-</head>
+
 </html>

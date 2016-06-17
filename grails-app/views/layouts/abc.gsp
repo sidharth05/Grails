@@ -31,6 +31,21 @@
         </div>
     </div>
 </nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="page-header">
+                <g:pageProperty name="page.header"/>
+            </div>
+            <g:pageProperty name="page.main-content"/>
+        </div>
+        <div class="col-md-3">
+            <g:pageProperty name="page.side-content"/>
+        </div>
+    </div>
+</div>
+
 <g:layoutBody/>
+
 </body>
 </html>

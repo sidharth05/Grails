@@ -6,29 +6,48 @@
     <title>Sign Up FOrm</title>
 </head>
 <body>
-<div class="container">
+
+<content tag="header">
     <h1>Signup Form</h1>
-    <form class="form-horizontal" method="post" action="/learning-management/user/save">
+</content>
+
+<content tag="main-content">
+
+    <form class="form-horizontal" method="post" action="/user/save">
         <div class="form-group">
-            <label >First Name</label>
-            <input class="form-control" type="text" name="firstName" placeholder="FirstName"><br><br>
+            <label class="col-md-3 control-label">First Name</label>
+            <div class="col-md-9">
+                <input class="form-control" type="text" name="firstName" placeholder="FirstName"><br><br>
+            </div>
         </div>
         <div class="form-group">
-            <label>Last Name</label>
-            <input class="form-control" type="text" name="lastName" placeholder="LastName"><br><br>
+            <label class="col-md-3 control-label">Last Name</label>
+            <div class="col-md-9">
+                <input class="form-control" type="text" name="lastName" placeholder="LastName"><br><br>
+            </div>
         </div>
         <div class="form-group">
-            <label>Email</label>
-            <input class="form-control" type="text" name="email" placeholder="example@xyz.info"><br><br>
+            <label class="col-md-3 control-label">Email</label>
+            <div class="col-md-9">
+                <input class="form-control" type="text" name="email" placeholder="example@xyz.info"><br><br>
+            </div>
         </div>
         <div class="form-group">
-            <label>Age</label>
-            <input class="form-control" type="number" name="age" placeholder="Age"><br><br>
+            <label class="col-md-3 control-label">Age</label>
+            <div class="col-md-9">
+                <input class="form-control" type="number" name="age" placeholder="Age"><br><br>
+            </div>
         </div>
-        <div class="form-group">
-            <input class="btn btn-primary" type="submit" value="Submit">
+        <div class="col-md-offset-3 col-md-9">
+            <input class="btn btn-primary " type="submit" value="Submit">
         </div>
     </form>
-</div>
+
+</content>
+
+<content tag="side-content">
+    div2 - Notice that the div2 element is after div1, in the HTML code. However, since div1 is floated to the left,
+    this happens: the text in div2 is floated around div1, and div2 surrounds the whole thing.
+</content>
 </body>
 </html>

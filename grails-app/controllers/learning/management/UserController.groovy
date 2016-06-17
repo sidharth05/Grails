@@ -9,23 +9,21 @@ class UserController {
     def save() {
 
         println(params)
-        User u1 = new User([myFirstName: params.firstName, myLastName: params.lastName,
-                                myEmail: params.email, myAge: params.age])
+        Person myUser = new Person([firstName: params.firstName, lastName: params.lastName,
+                                email: params.email, age: params.age])
 
-        session.recentlySavedUser = u1
+        myUser.save()
+        session.recentlySavedUser = myUser
 
-        if(!session.allUsers) {
-            session.allUsers = []
-        }
-        session.allUsers.add(u1)
         redirect(action: "show")
     }
 
     def show () {
-        [recentlySavedUser: session.recentlySavedUser, foo: 3]
+        Person ironMan = Person.get(params.id)
+        [recentlySavedUser: session.recentlySavedUser]
     }
 
     def list() {
-        [allUsers: session.allUsers]
+        [allUsers: Person.list()]
     }
 }
