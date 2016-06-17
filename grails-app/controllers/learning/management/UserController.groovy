@@ -15,7 +15,7 @@ class UserController {
         myUser.save()
         session.recentlySavedUser = myUser
 
-        redirect(action: "show")
+        redirect(action: "show", id: myUser.id)
     }
 
     def show () {

@@ -19,12 +19,12 @@
         </div>
         <div class="container collapse navbar-collapse" id="bs">
             <ul class="nav navbar-nav navbar-right">
-                <li class="${myCurrentPage == 'create' ? 'active' : '' }">
+                <li class="${params.action == 'create' ? 'active' : '' }">
                     <g:link controller="user" action="create">Create</g:link>
                 </li>
-                <li class="${myCurrentPage == 'show' ? 'active' : '' }">
+                <li class="${params.action == 'show' ? 'active' : '' }">
                     <g:link controller="user" action="show">Show</g:link>
-                <li class="${myCurrentPage == 'list' ? 'active' : '' }">
+                <li class="${params.action == 'list' ? 'active' : '' }">
                     <g:link controller="user" action="list">List</g:link>
                 </li>
             </ul>
