@@ -30,6 +30,7 @@
                 <th>Email</th>
                 <th>Age</th>
                 <th>Action</th>
+                <th>Delete</th>
             </tr>
             </thead>
             <tbody>
@@ -44,6 +45,9 @@
                     <td>${user.age}<br></td>
                     <td>
                         <g:link controller="user" action="edit" id="${user.id}">Edit</g:link>
+                    </td>
+                    <td>
+                        <g:link controller="user" action="delete" id="${user.id}">Delete</g:link>
                     </td>
                 </tr>
             </g:each>

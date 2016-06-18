@@ -43,4 +43,12 @@ class UserController {
         myPerson.save(flush: true)
         redirect(action: "list")
     }
+
+    def delete () {
+        Person PersonInstance = Person.get(params.id)
+
+        PersonInstance.delete(flush: true)
+
+        redirect(action: "list")
+    }
 }
