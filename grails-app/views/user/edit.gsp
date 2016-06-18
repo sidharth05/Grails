@@ -8,34 +8,38 @@
 <body>
 
 <content tag="header">
-    <h1>Signup Form</h1>
+    <h1>Edit Form</h1>
 </content>
 
 <content tag="main-content">
 
-    <g:form class="form-horizontal" method="post" action="save">
+    <g:form class="form-horizontal" method="post" action="update">
+        <input type="hidden" name="id" value="${edit1.id}">
         <div class="form-group">
             <label class="col-md-3 control-label">First Name</label>
             <div class="col-md-9">
-                <input class="form-control" type="text" name="firstName" placeholder="FirstName"><br><br>
+                <input class="form-control" type="text" name="firstName" placeholder="FirstName"
+                       value="${edit1.firstName}"><br><br>
             </div>
         </div>
         <div class="form-group">
             <label class="col-md-3 control-label">Last Name</label>
             <div class="col-md-9">
-                <input class="form-control" type="text" name="lastName" placeholder="LastName"><br><br>
+                <input class="form-control" type="text" name="lastName" placeholder="LastName"
+                       value="${edit1.lastName}"><br><br>
             </div>
         </div>
         <div class="form-group">
             <label class="col-md-3 control-label">Email</label>
             <div class="col-md-9">
-                <input class="form-control" type="text" name="email" placeholder="example@xyz.info"><br><br>
+                <input class="form-control" type="text" name="email" placeholder="example@xyz.info"
+                       value="${edit1.email}"><br><br>
             </div>
         </div>
         <div class="form-group">
             <label class="col-md-3 control-label">Age</label>
             <div class="col-md-9">
-                <input class="form-control" type="number" name="age" placeholder="Age"><br><br>
+                <input class="form-control" type="number" name="age" placeholder="Age" value="${edit1.age}"><br><br>
             </div>
         </div>
         <div class="col-md-offset-3 col-md-9">

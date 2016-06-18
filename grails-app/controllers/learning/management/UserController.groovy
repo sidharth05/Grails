@@ -15,15 +15,32 @@ class UserController {
         myUser.save()
         session.recentlySavedUser = myUser
 
-        redirect(action: "show", id: myUser.id)
+        redirect(action: "list", id: myUser.id)
     }
 
     def show () {
         Person ironMan = Person.get(params.id)
-        [recentlySavedUser: session.recentlySavedUser]
+        [recentlySavedUser: ironMan]
+    }
+
+    def edit () {
+        return [edit1: Person.get(params.id)]
     }
 
     def list() {
         [allUsers: Person.list()]
+    }
+
+    def update() {
+        println "Received parameters to update: ${params}"
+        Person myPerson = Person.get(params.id)
+
+        myPerson.firstName = params.firstName
+        myPerson.lastName = params.lastName
+        myPerson.email = params.email
+        myPerson.age = params.age.toInteger()
+
+        myPerson.save(flush: true)
+        redirect(action: "list")
     }
 }

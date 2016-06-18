@@ -22,8 +22,6 @@
                 <li class="${params.action == 'create' ? 'active' : '' }">
                     <g:link controller="user" action="create">Create</g:link>
                 </li>
-                <li class="${params.action == 'show' ? 'active' : '' }">
-                    <g:link controller="user" action="show">Show</g:link>
                 <li class="${params.action == 'list' ? 'active' : '' }">
                     <g:link controller="user" action="list">List</g:link>
                 </li>

@@ -24,19 +24,27 @@
         <table class="table table-striped">
             <thead>
             <tr>
+                <th>ID</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
                 <th>Age</th>
+                <th>Action</th>
             </tr>
             </thead>
             <tbody>
             <g:each in="${allUsers}" var="user">
                 <tr class="${user.age.toInteger() > 100 ? 'bg-danger' : ' '} ">
+                    <td>
+                        <g:link controller="user" action="show" id="${user.id}">${user.id}</g:link>
+                    </td>
                     <td>${user.firstName}<br></td>
                     <td>${user.lastName}<br></td>
                     <td>${user.email}<br></td>
                     <td>${user.age}<br></td>
+                    <td>
+                        <g:link controller="user" action="edit" id="${user.id}">Edit</g:link>
+                    </td>
                 </tr>
             </g:each>
             </tbody>
