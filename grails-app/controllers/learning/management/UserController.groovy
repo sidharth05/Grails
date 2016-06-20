@@ -3,19 +3,23 @@ package learning.management
 class UserController {
 
     def create() {
-        render(view: "signup")
+        [myUser: new Person()]
     }
 
     def save() {
 
         println(params)
-        Person myUser = new Person([firstName: params.firstName, lastName: params.lastName,
+        Person myPersonInstance = new Person([firstName: params.firstName, lastName: params.lastName,
                                 email: params.email, age: params.age])
 
-        myUser.save()
-        session.recentlySavedUser = myUser
+        myPersonInstance.save()
+        println myPersonInstance.errors
+        if (myPersonInstance.hasErrors()) {
+            render(view: "create", model: [myUser: myPersonInstance])
+            return
+        }
 
-        redirect(action: "list", id: myUser.id)
+        redirect(action: "list")
     }
 
     def show () {
