@@ -25,6 +25,9 @@
                 <li class="${params.action == 'list' ? 'active' : '' }">
                     <g:link controller="user" action="list">List</g:link>
                 </li>
+                <li>
+                    <g:link controller="user" action="search">Search</g:link>
+                </li>
             </ul>
         </div>
     </div>

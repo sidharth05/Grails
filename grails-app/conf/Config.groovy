@@ -117,3 +117,13 @@ log4j.main = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+abc.xyz.myName = "Learning Management"
+
+abc {
+    xyz {
+        myName = "Learning Management"
+        myPassword = "123456"
+        myKey = "jhsdfnv"
+    }
+}
